@@ -1,0 +1,174 @@
+.map{
+    height: 500px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 16px;
+    box-shadow:  0 0 8px -4px rgba(0,0,0,0.5);
+}
+
+.map .leaflet-container{
+    height: 100%;
+
+   
+}
+
+.info-flag img{
+    width:100px;
+    border-radius: 5px;
+}
+.info-flag{
+    height: 80px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 8px;
+}
+.info-container{
+ width: 150px;   
+}
+.info-name{
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.info-confirmed,
+.info-recovered,
+.info-deaths{
+    font-size: 16px;
+    margin-top: 5px;
+}
+html, body {
+    margin: 0;
+    background-color: #333;
+  }
+  
+  
+  #app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  
+  .leaflet-container {
+    width: 100%;
+    height: 300px;
+    opacity: 0;
+     animation: fadeInLeaflet 1.5s ease forwards 2s;
+  }
+  
+  @keyframes fadeInLeaflet {
+    to {opacity: 1;}
+  }
+  
+  .show-map {
+    overflow: hidden;
+    position: relative;
+    width: inherit;
+    height: 300px;
+    animation: fadeInShadow 1.5s ease forwards 2s;
+  }
+  
+  @keyframes fadeInShadow {
+    0% {
+      box-shadow: none;
+    }
+    100% {
+      box-shadow: 0 0 25px 20px rgba(0, 0, 0, .7);
+    }
+  }
+  
+  .details-on-map {
+    position: relative;
+    width: 100%;
+  }
+  #map {
+    position: absolute;
+    top: 0;
+    box-sizing: content-box;
+    height: inherit;
+    width: 100%;
+  }
+  .paper-map {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    perspective: 150rem;
+    opacity: 0;
+  }
+  .map-side {
+    box-sizing: content-box;
+    width: 25vw;
+    height: 300px;
+    background-color: rgba(0, 0, 0, .2);
+    outline: 1px solid transparent;
+    overflow: hidden;
+  
+  
+ 
+  }
+  .map-side:nth-of-type(1), .map-side:nth-of-type(3){
+    transform-origin: 100% 0;
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.3);
+  }
+  .map-side:nth-of-type(2), .map-side:nth-of-type(4) {
+    transform-origin: 0 0;
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes openMapOuter {
+    100% {
+      transform: translateX(0) rotateY(0deg);
+      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+  }
+  @keyframes openMapInnerLeft {
+    0% {transform: translateX(12.5vw) rotateY(60deg);}
+    20% {transform: translateX(10vw) rotateY(53deg);}
+    38% {transform: translateX(7.75vw) rotateY(46.2deg);}
+    50% {transform: translateX(6.25vw) rotateY(41.5deg);}
+    65% {transform: translateX(4.375vw) rotateY(34.5deg);}
+    75% {transform: translateX(3.125vw) rotateY(29deg);}
+    83% {transform: translateX(2.125vw) rotateY(23.8deg);}
+    90% {transform: translateX(1.25vw) rotateY(18.1deg);}
+    95% {transform: translateX(0.625vw) rotateY(12.8deg);}
+    98% {transform: translateX(0.25vw) rotateY(8deg);}
+    99% {transform: translateX(0.125vw) rotateY(5deg);}
+    100% {
+      transform: translateX(0) rotateY(0);
+      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+  }
+  @keyframes openMapInnerRight {
+    0% {transform: translateX(-12.5vw) rotateY(-60deg);}
+    20% {transform: translateX(-10vw) rotateY(-53deg);}
+    38% {transform: translateX(-7.75vw) rotateY(-46.2deg);}
+    50% {transform: translateX(-6.25vw) rotateY(-41.5deg);}
+    65% {transform: translateX(-4.375vw) rotateY(-34.5deg);}
+    75% {transform: translateX(-3.125vw) rotateY(-29deg);}
+    83% {transform: translateX(-2.125vw) rotateY(-23.8deg);}
+    90% {transform: translateX(-1.25vw) rotateY(-18.1deg);}
+    95% {transform: translateX(-0.625vwm) rotateY(-12.8deg);}
+    98% {transform: translateX(-0.25vw) rotateY(-8deg);}
+    99% {transform: translateX(-0.125vw) rotateY(-5deg);}
+    100% {
+      transform: translateX(0) rotateY(0);
+      box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+  }
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+  @keyframes fadeIn {
+    to {opacity: 1;}
+  }
+  @keyframes paperMapFadeIn {
+    0% {transform: scale(0, 0.5); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+  }
+  
+ 

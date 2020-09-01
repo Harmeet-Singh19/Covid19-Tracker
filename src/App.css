@@ -1,0 +1,250 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(PatuaOne-Regular.ttf);
+}
+*{
+  margin:0;
+  text-transform: capitalize;
+  font-family:myFirstFont;
+
+}
+
+html,body{
+  background-color: gainsboro;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  }
+
+/* Header- navbar*/
+.togglee {
+  position: relative;
+  padding: 10px 5px;
+  
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: cyan;
+}
+
+.toggle-containerr {
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 30px;
+}
+
+.toggle-containerr > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 0px;
+  margin-right: 2px;
+}
+
+
+.light-mode {
+  background-color: #616e7c;
+  color: #333;
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  padding: 15px;
+  height: 60px;
+  transition: background-color 0.25s ease-out;
+}
+
+
+.light-mode nav {
+  transition: background-color 0.25s ease-out;
+}
+
+.dark-mode {
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  padding: 15px;
+  height: 60px;
+  background-color: #1f2933;
+  color: #999;
+}
+
+/*Main content- Paper*/
+
+.app{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  width: 102%;  
+}
+
+/*Left-content*/
+
+.app__left{
+  flex: 0.95 ;
+  margin-bottom: 10px;
+  }
+/* Header */
+
+.app__header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.app__header >h1{
+  color: #fc3c3c;
+  font-size: 2rem;
+  }
+  
+  
+h1 {
+  margin: 0;
+}
+  
+
+/* Dropdown Menu */
+
+.app__select{
+  
+  border: 2px solid black;
+  background-color:black;
+  margin-right: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2px 10px;
+  width: 178px;
+  *width: 200px;
+
+}
+.app__dropdown{
+  border: 2px solid yellow;
+  background-color: black;
+  margin-right: 10px;
+}
+
+.menu__flag{
+  height: 30px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 2px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  align-content: center;
+}
+
+.menu__flag img{
+  align-content: center;
+  width: 30px;
+  border-radius: 0.2px;
+}
+
+.menu__flag2{
+  height: 10px;
+  width: 15px;
+  background-size: cover;
+  border-radius: 2px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.menu__flag2 img{
+  width: 15px;
+  border-radius: 0.2px;
+    
+}
+
+/* The three InfoBoxes */
+
+.app__stats{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Right-content */
+
+.app__right{
+  display: flex;
+  flex-direction: column;
+
+}
+.app__right .MuiCardContent-root{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+/* Graph */
+
+.app__graph{
+  flex-grow: 1;
+  
+}
+.app__graphTitle{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+
+.app__footer{
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 990px){
+  .app{
+    flex-direction: column;
+    
+  }
+  
+    .app__select{
+    margin-right: 0px;
+    }
+}
+@media (max-width: 500px){
+  .app__select{
+    width: 160px;
+    margin-left: -20px;
+  }
+  .app__dropdown{
+    width: 140px;
+  }
+}

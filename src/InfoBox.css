@@ -1,0 +1,130 @@
+@font-face {
+  font-family: myFirstFont1;
+  src: url(Exo2-Italic-VariableFont_wght.ttf);
+}
+
+
+.infoBox{
+    flex:1;
+    cursor: pointer;
+  justify-content: space-between;
+
+}
+
+.infoBox:not(:last-child){
+    margin-right: 15px;
+}
+.infoBox--selected {
+    border-top: 10px solid #0000CD;
+    
+  }
+  
+  .infoBox--red {
+    border-color:  #cc1034;
+  }
+  .infoBox--green {
+    border-color:#9ACD32;
+  }
+  
+  .infoBox__cases--green {
+    color: lightgreen !important;
+  }
+  .infoBox__cases--blue{
+    color:  #00BFFF !important;
+  }
+  
+.infoBox__cases {
+    color: #fb4443;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+     font-family: myFirstFont1 !important;
+     letter-spacing: 2px !important;
+    
+    }
+
+  
+  
+  .infoBox__total {
+    color: #6c757d;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    margin-top: 15px !important;
+    font-family: myFirstFont1 !important;
+    letter-spacing: 3px !important;
+  }
+  .infoBox__title{
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    margin-top: 15px !important;
+    font-family: myFirstFont1 !important;
+    letter-spacing: 3px !important;
+  }
+  @media (max-Width:110px){
+    .infoBox__total {
+    
+      font-size: 1.6rem !important;
+      
+      letter-spacing: 1.1px !important;
+    }
+    .infoBox__title{
+      
+      font-size: 1.55rem !important;
+     
+      letter-spacing: 0.8px !important;
+    }
+    .infoBox__cases {
+    
+      font-size: 1.4rem;
+      margin-right: 2px;
+       font-family: myFirstFont1 !important;
+       letter-spacing: 1.1px !important;
+      
+      }
+  }
+  @media (max-Width:500px){
+    .infoBox__total {
+    
+      font-size: 1.2rem !important;
+      
+      letter-spacing: 0.9px !important;
+    }
+    .infoBox__title{
+      
+      font-size: 0.8rem !important;
+     
+      letter-spacing: 0.5px !important;
+    }
+    .infoBox__cases {
+    
+      font-size: 1.05rem;
+      margin-right: 2px;
+       font-family: myFirstFont1 !important;
+       letter-spacing: 1.1px !important;
+      
+      }
+  }
+  @media (max-Width:380px){
+    .infoBox__total {
+    
+      font-size: 0.9rem !important;
+      
+      letter-spacing: 0.9px !important;
+    }
+    .infoBox__title{
+      
+      font-size: 0.65rem !important;
+  
+      letter-spacing: 0.5px !important;
+    }
+    .infoBox__cases {
+    
+      font-size: 1rem;
+      margin-right: 2px;
+       font-family: myFirstFont1 !important;
+       letter-spacing: 1.1px !important;
+      
+      }
+  }
+
+
